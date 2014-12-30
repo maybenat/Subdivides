@@ -1,0 +1,107 @@
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Muli:300' rel='stylesheet' type='text/css'>
+    <script src="jquery.min.js"></script>
+
+    <link href="bootstrap-slider.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' href="bootstrap.min.css">
+
+    <script src="bootstrap-slider.js"></script>
+    <link rel='stylesheet' type='text/css' href="style.css">
+
+    <script id="vertex-shader" type="x-shader/x-vertex">
+    attribute vec4 vPosition;
+    attribute vec4 vColor;
+    varying vec4 fColor;
+
+    void
+    main() {
+        gl_Position = vPosition;
+        fColor = vColor;
+
+    }
+    </script>
+
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
+
+    varying vec4 fColor;
+
+    void
+    main() {
+        gl_FragColor = fColor;
+    }
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="webgl-utils.js"></script>
+    <script type="text/javascript" src="initShaders.js"></script>
+    <script type="text/javascript" src="MV.js"></script>
+    <script type="text/javascript" src="hw1.js"></script>
+
+
+</head>
+
+<body>
+    <rightSide>
+        <canvas id="gl-canvas" width="500" height="400" style="border:1px solid #fff;">
+            Browser doesn't support the HTML5 canvas element
+        </canvas>
+    </rightSide>
+    <h1>Assignment One
+        <h2>Natalie McMullen, U0409117</h2>
+    </h1>
+    <br>
+    <br>
+    <p>Subdivisions:
+        <span id="subVal">2</span>
+    </p>
+    <!-- I made use of the bootstrap slider for these sliders: https://github.com/seiyria/bootstrap-slider -->
+    <!-- I made use of bootstrap for buttons -->
+    <padding>
+        <input id="sub" data-slider-id='sub' type="text" data-slider-min="1" data-slider-max="6" data-slider-step="1" data-slider-value="2" />
+    </padding>
+    <p>Theta Value:
+        <span id="thetaVal">0</span>
+    </p>
+    <padding>
+        <input id="theta" data-slider-id='theta' type="text" data-slider-min="1" data-slider-max="360" data-slider-step="1" data-slider-value="1" />
+
+    </padding>
+    <br>
+    <p>Twist Enabled:
+        <span id="twistVal">Yes</span>
+    </p>
+    <padding>
+        <div class="twist-btn" data-toggle="buttons">
+            <padding>
+                <label class="btn btn-twist" for="test2_t">
+                    <input type="radio" name="twist" id="t.yes" value="Yes" />Yes
+                </label>
+                <label class="btn btn-twist" for="test2_f">
+                    <input type="radio" name="twist" id="t.no" value="No" />No
+                </label>
+            </padding>
+        </div>
+        <br>
+        <p>Polygon Enabled:
+            <span id="polyVal">No</span>
+        </p>
+        <padding>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="selection">Triangle</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Triangle</a>
+                    </li>
+                    <li><a href="#">Square</a>
+                    </li>
+                </ul>
+            </div>
+        </padding>
+</body>
+
+</html>

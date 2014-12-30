@@ -1,0 +1,79 @@
+
+h1 {
+
+    font-family: 'Muli', sans-serif;
+
+    font-weight: 400;
+
+}
+
+h2 {
+
+    font-family: 'Muli', sans-serif;
+
+    font-size: 14pt;
+
+    padding-left: 45px;
+
+}
+
+p {
+
+    font-family: 'Muli', sans-serif;
+
+    font-size: 14pt;
+
+    padding-left: 10px;
+
+}
+
+padding {
+
+    padding-left: 30px;
+
+}
+
+rightSide {
+
+    float: right;
+    padding-right: 200px;
+
+}
+
+#sub .slider-selection {
+
+    background: #BABABA;
+
+}
+
+#theta .slider-selection {
+
+    background: #BABABA;
+
+}
+
+.btn-twist, .btn-default {
+
+    font-family: 'Muli', sans-serif;
+
+    border-color: #000000;
+
+}
+
+.btn-twist.active {
+
+    font-family: 'Muli', sans-serif;
+
+    color: #ffffff;
+
+    background-color: #468CC8;
+
+    border-color: #000000;
+
+}
+
+.dropdown-menu {
+
+    font-family: 'Muli', sans-serif;
+
+}
